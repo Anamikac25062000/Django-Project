@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <center><img src="{% static 'img/shoppy.jpg' %}" height="470px" width="100%" alt="img"></center>
+</div>
+<div class="container-fluid" style="margin-bottom:100px;height:50px;">
+    <h3 class="text-center">E-Commerce</h3>
+    <p style="text-align:justify;">An e-commerce website is one that allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, accept payments, manage shipping and logistics, and provide customer service.</p>
+</div>
+<div class="container-fluid" style="margin-bottom:100px;">
+    <div class="row">
+        {% for item in your_items_queryset %}
+        <div class="col-sm-4">
+            <div class="card" style="height: 100%;">
+                <img src="{{ item.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ item.product_name }}</h5>
+                    <a href="#" class="btn btn-primary" style="position: relative; left: 38%;">Product</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

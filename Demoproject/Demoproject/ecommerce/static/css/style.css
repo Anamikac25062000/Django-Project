@@ -1,0 +1,23 @@
+body
+{
+background-color:rgb(153, 153, 102);
+font-family: 'Roboto', sans-serif;
+}
+/*navbar*/
+.navbar-light .navbar-brand,.navbar-light .navbar-nav .nav-link.active,.navbar-light .navbar-nav .nav-link{
+  color: rgb(255, 255, 255);
+}
+.bg-light
+{
+background-color:gray!important;
+}
+#FOOTER
+/*.footer
+{
+width:100%
+height:60px;
+background-color:gray;
+position:fixed;
+left:0px;
+bottom:15px;
+}*/

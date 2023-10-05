@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+    <h4 class="text-center">You have searched for {{query}}</h4>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h6 class="text-center">SEARCH RESULTS</h6>
+        {% for i in products %}
+        <div class="col-sm-4 mt-4">
+            <div class="card" style="height:400px;width:450px">
+                <img src="{{i.image.url}}" height="200px" width="200px">
+                <div class="card-body">
+                    <h4 class="card-title text-center">{{i.name}}</h4>
+                    <a href="{% url 'shop:productdetails' i.slug %}" class="btn btn-primary" style="position:relative;left:38%;">Product Details</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <h5 class="text-center">0 Result Found</h5>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="a"></textarea>
+    </div>
+      <div class="mb-3">
+    <label class="form-label" class="form-label">Mobile Number</label>
+    <input type="text" name="b" class="form-control">
+    <div class="form-text">Enter Mobile Number</div>
+  </div>
+     <div class="mb-3">
+    <label class="form-label" class="form-label">Account Number</label>
+    <input type="text" name="c" class="form-control">
+         <div class="form-text">Enter Account Number</div>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
